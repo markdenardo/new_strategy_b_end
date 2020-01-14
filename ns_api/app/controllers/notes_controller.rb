@@ -42,7 +42,7 @@ class NotesController < ApplicationController
     private
 
     def note_params
-      params.require(:note).permit(:strategy, :text, :url, :card_id)
+      params.require(:note).permit(:strategy, :text, :url, :card_id, :note_id)
     end
 
   end

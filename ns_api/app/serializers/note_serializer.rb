@@ -1,4 +1,4 @@
 class NoteSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :text, :url, :note_id
+  attributes :text, :url, :card_id
 end
