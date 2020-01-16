@@ -1,3 +1,3 @@
 class Note < ApplicationRecord
-  belongs_to :card, dependent: :destroy
+  belongs_to :card
 end
