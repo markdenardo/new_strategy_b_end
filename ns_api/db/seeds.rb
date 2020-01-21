@@ -24,7 +24,7 @@ cards =
              "strategy": "A line has two sides"
     },
     {
-             "strategy": "Allow an easement (an easement is the abandonment of a stricture)"
+             "strategy": "Allow an easement (an easement is the abandonment of a structure)"
     },
     {
              "strategy": "Are there sections? Consider transitions"
@@ -1489,7 +1489,9 @@ end
 
 466.times do
 Note.create(text:"used a Daft Punk sample", url:"https://www.instagram.com/p/B678grvlA1P/", card_id:n)
+Note.create(text:"used a cat meow sample", url:"https://www.instagram.com/tv/B7T2DGJlJ_h/", card_id:n)
 n=n+1
+
 end
 
 puts "seeded"
