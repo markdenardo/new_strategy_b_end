@@ -24,7 +24,8 @@ class CardsController < ApplicationController
       end
 
       def update
-        cards = Note.create(card_params)
+        card = Card.find(params[:id])
+        card.update(card_params)
         if card.valid?
           render json: card
         else
@@ -34,15 +35,15 @@ class CardsController < ApplicationController
 
       def destroy
         # byebug
-        @card = Card.find(params[:id])
-        @card.destroy
+        card = Card.find(params[:id])
+        card.destroy
         render json: {message: "It has been destroyed"}
       end
 
     private
 
     def card_params
-      params.require(:card).permit(:strategy, :text, :url, :card_id)
+      params.require(:card).permit(:id, :strategy, :text, :url, :card_id, :note_id)
     end
 
   end

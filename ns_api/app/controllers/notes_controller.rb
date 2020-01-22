@@ -13,18 +13,8 @@ class NotesController < ApplicationController
         end
       end
 
-
       def create
         note = Note.create(note_params)
-        if note.valid?
-          render json: note
-        else
-          render json: {errors: note.errors.full_messages}
-        end
-      end
-
-      def update
-        notes = Note.create(note_params)
         if note.valid?
           render json: note
         else
