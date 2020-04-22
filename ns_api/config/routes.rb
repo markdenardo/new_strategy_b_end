@@ -22,4 +22,6 @@ patch '/notes/:id' => 'notes#update'
 delete '/notes/:id' => 'notes#destroy'
 # Removes instance from database
 
+root = 'cards#index'
+
 end
