@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+root to: 'cards#index'
+
 get '/cards' => 'cards#index'
 # Shows all instances of your card
 post '/cards' => 'cards#create'
@@ -22,6 +24,6 @@ patch '/notes/:id' => 'notes#update'
 delete '/notes/:id' => 'notes#destroy'
 # Removes instance from database
 
-root = 'cards#index'
+
 
 end
