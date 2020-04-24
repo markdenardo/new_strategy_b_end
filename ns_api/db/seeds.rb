@@ -1482,14 +1482,16 @@ cards =
 ]
 
 
+
 cards.each do |card|
   Card.create card
 end
 
 
 466.times do
-Note.create(text:"used a Daft Punk sample", url:"https://www.instagram.com/p/B678grvlA1P/", card_id:n)
-Note.create(text:"used a cat meow sample", url:"https://www.instagram.com/tv/B7T2DGJlJ_h/", card_id:n)
+Note.create(text:'wrote a song for the ' + Faker::Space.constellation + ' constellation', url:"https://www.instagram.com/p/B7v8zCFlGu2/", card_id:n)
+Note.create(text:'sampled a '+ Faker::Creature::Animal.name + ' eating ' + Faker::Food.fruits,  url:"https://m.soundcloud.com/markdenardo/sets/yoga", card_id:n)
+Note.create(text:'played a ' + Faker::Music.instrument + ' in the key of ' + Faker::Music.key, url:"https://www.instagram.com/p/B678grvlA1P/", card_id:n)
 n=n+1
 
 end
